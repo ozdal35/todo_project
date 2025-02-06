@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your To-Do List</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'tasks/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Your Tasks</h1>
+    </header>
+    <div class="container">
+        <p>
+            Logged in as {{ request.user.username }} |
+            <a href="{% url 'logout' %}">Logout</a>
+        </p>
+        <a href="{% url 'task_create' %}" class="btn">Create New Task</a>
+        <ul class="task-list">
+            {% for task in tasks %}
+            <li>
+                <strong>{{ task.title }}</strong> - {{ task.description }}
+                {% if task.completed %}
+                    (Completed)
+                {% else %}
+                    (Pending)
+                {% endif %}
+                <a href="{% url 'task_update' task.pk %}">Edit</a>
+                <a href="{% url 'task_delete' task.pk %}">Delete</a>
+            </li>
+            {% empty %}
+            <li>No tasks available.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

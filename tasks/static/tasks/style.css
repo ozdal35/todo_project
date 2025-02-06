@@ -1,0 +1,160 @@
+/* ============================
+   Global Reset & Base Styles
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ============================
+   Container & Layout
+   ============================ */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================
+   Header Styling
+   ============================ */
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 15px;
+}
+
+/* ============================
+   Link & Button Styling
+   ============================ */
+a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #764ba2;
+}
+
+button, input[type="submit"] {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* ============================
+   Form & Input Elements
+   ============================ */
+form p, form label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* ============================
+   Table Styling (For Login Form)
+   ============================ */
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+table tr td:first-child {
+    width: 30%;
+    font-weight: bold;
+}
+
+/* ============================
+   Task List Styling
+   ============================ */
+ul.task-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.task-list li {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+ul.task-list li a {
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+/* ============================
+   Error Message Styling
+   ============================ */
+p.error {
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+/* ============================
+   Responsive Adjustments
+   ============================ */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    table td:first-child {
+        width: 35%;
+    }
+
+    button, input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+    }
+}
